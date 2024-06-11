@@ -9,7 +9,7 @@ from yanews.settings import NEWS_COUNT_ON_HOME_PAGE
 
 @pytest.fixture
 def author(django_user_model):  
-    return django_user_model.objects.create(username='Автор')
+    return django_user_model.objects.create(username='Вася Помидоров')
 
 
 @pytest.fixture

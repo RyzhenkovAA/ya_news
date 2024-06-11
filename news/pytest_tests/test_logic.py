@@ -30,7 +30,7 @@ def test_user_can_create_comment(author_client, author, id_for_args, form_data):
 @pytest.mark.django_db
 def test_user_cant_use_bad_words(admin_client, id_for_args):
     url = reverse('news:detail', args=id_for_args)
-    bad_words_data = {'text': f'Какой-то текст, {BAD_WORDS[0]}, еще текст'}
+    bad_words_data = {'text': f'Текст, {BAD_WORDS[0]}, текст'}
     response = admin_client.post(url, data=bad_words_data)
     assertFormError(
         response,
